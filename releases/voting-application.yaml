@@ -1,0 +1,14 @@
+---
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: voting-application
+  namespace: demo
+  annotations:
+    fluxcd.io/automated: "true"
+spec:
+  releaseName: ghost
+  chart:
+    git: ssh://git@github.com/hands-on-kubernetes-on-windows/voting-application-flux
+    ref: master
+    path: charts/voting-application
