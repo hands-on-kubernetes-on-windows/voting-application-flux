@@ -3,13 +3,13 @@ apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: voting-application
-  namespace: demo4
+  namespace: demo5
   annotations:
     fluxcd.io/automated: "true"
 spec:
   releaseName: voting-application
   helmVersion: v3
-  timeout: 900
+  timeout: 1200
   wait: false
   rollback:
     enable: false
