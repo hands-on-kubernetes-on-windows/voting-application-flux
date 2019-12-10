@@ -7,10 +7,11 @@ metadata:
     app.kubernetes.io/instance: {{ .Release.Name | quote }}
     app.kubernetes.io/version: {{ .Chart.AppVersion }}
     helm.sh/chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
-  annotations:
-    "helm.sh/hook": post-install,post-upgrade
-    "helm.sh/hook-weight": "-5"
-    "helm.sh/hook-delete-policy": hook-succeeded
+  annotations: {}
+    # We are not triggering this as a post-install hook due to current bugs in support for Helm v3 wait in Flux
+    #"helm.sh/hook": post-install,post-upgrade
+    #"helm.sh/hook-weight": "-5"
+    #"helm.sh/hook-delete-policy": hook-succeeded
 spec:
   backoffLimit: 10
   template:
