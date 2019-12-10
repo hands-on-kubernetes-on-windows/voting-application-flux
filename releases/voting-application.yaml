@@ -11,6 +11,7 @@ spec:
   helmVersion: v3
   timeout: 900
   rollback:
+    enable: true
     wait: false
   chart:
     git: ssh://git@github.com/hands-on-kubernetes-on-windows/voting-application-flux
