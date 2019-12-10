@@ -3,7 +3,7 @@ apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: voting-application
-  namespace: demo5
+  namespace: demo
   annotations:
     fluxcd.io/automated: "true"
 spec:
