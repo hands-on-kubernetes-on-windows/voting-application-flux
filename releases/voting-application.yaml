@@ -7,7 +7,8 @@ metadata:
   annotations:
     fluxcd.io/automated: "true"
 spec:
-  releaseName: ghost
+  releaseName: voting-application
+  helmVersion: v3
   chart:
     git: ssh://git@github.com/hands-on-kubernetes-on-windows/voting-application-flux
     ref: master
